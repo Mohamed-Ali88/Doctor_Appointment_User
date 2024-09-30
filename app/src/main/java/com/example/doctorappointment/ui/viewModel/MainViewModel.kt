@@ -1,6 +1,7 @@
 package com.example.doctorappointment.ui.viewModel
 
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.doctorappointment.domen.CategoryModel
 import com.example.doctorappointment.domen.DoctorsModel
@@ -27,7 +28,7 @@ class MainViewModel : ViewModel() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Log.d("viewModel0000", "onCancelled: ${error.message}")
             }
         }
         db.addValueEventListener(eventListener)
