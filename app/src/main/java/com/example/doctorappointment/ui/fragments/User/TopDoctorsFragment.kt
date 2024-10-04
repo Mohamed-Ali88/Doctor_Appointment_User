@@ -1,4 +1,4 @@
-package com.example.doctorappointment.ui.fragments
+package com.example.doctorappointment.ui.fragments.User
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

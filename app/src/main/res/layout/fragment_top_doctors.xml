@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.TopDoctorsFragment">
+    tools:context=".ui.fragments.User.TopDoctorsFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbTopDoctor"
@@ -22,6 +22,7 @@
         android:layout_height="0dp"
         android:clipToPadding="true"
         android:orientation="vertical"
+        tools:listitem="@layout/viewholder_doctor"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

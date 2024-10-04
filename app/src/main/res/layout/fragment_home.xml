@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.fragments.HomeFragment">
+    tools:context=".ui.fragments.User.HomeFragment">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -138,6 +138,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
+                    tools:listitem="@layout/viewholder_category"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:orientation="horizontal"
@@ -198,6 +199,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
                     android:clipToPadding="false"
+                    tools:listitem="@layout/viewholder_top_doctors"
                     android:paddingStart="16dp"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

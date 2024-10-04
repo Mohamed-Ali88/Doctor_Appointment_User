@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.example.doctorappointment.ui.fragments.HomeFragment"
+        android:name="com.example.doctorappointment.ui.fragments.User.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -22,10 +22,13 @@
         <action
             android:id="@+id/action_home_to_doctorDetails"
             app:destination="@id/doctorDetails" />
+        <action
+            android:id="@+id/action_home_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
     </fragment>
     <fragment
         android:id="@+id/categoryDoctors"
-        android:name="com.example.doctorappointment.ui.fragments.CategoryDoctorsFragment"
+        android:name="com.example.doctorappointment.ui.fragments.User.CategoryDoctorsFragment"
         android:label="fragment_category"
         tools:layout="@layout/fragment_doctor_category" >
         <action
@@ -39,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/doctorDetails"
-        android:name="com.example.doctorappointment.ui.fragments.DoctorDetailsFragment"
+        android:name="com.example.doctorappointment.ui.fragments.User.DoctorDetailsFragment"
         android:label="fragment_doctor"
         tools:layout="@layout/fragment_details_doctor" >
         <action
@@ -62,10 +65,13 @@
             app:destination="@id/topDoctors"
             app:popUpTo="@id/topDoctors"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_doctorDetails_to_makeAppointmentFragment"
+            app:destination="@id/makeAppointmentFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchDoctors"
-        android:name="com.example.doctorappointment.ui.fragments.SearchDoctorsFragment"
+        android:name="com.example.doctorappointment.ui.fragments.User.SearchDoctorsFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_doctors_search" >>
         <action
@@ -79,17 +85,17 @@
     </fragment>
     <fragment
         android:id="@+id/booked"
-        android:name="com.example.doctorappointment.ui.fragments.BookedFragment"
+        android:name="com.example.doctorappointment.ui.fragments.User.BookedFragment"
         android:label="fragment_booked"
         tools:layout="@layout/fragment_booked" />
     <fragment
         android:id="@+id/account"
-        android:name="com.example.doctorappointment.ui.fragments.AccountFragment"
+        android:name="com.example.doctorappointment.ui.fragments.User.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
     <fragment
         android:id="@+id/topDoctors"
-        android:name="com.example.doctorappointment.ui.fragments.TopDoctorsFragment"
+        android:name="com.example.doctorappointment.ui.fragments.User.TopDoctorsFragment"
         android:label="fragment_top_doctors"
         tools:layout="@layout/fragment_top_doctors" >
         <action
@@ -100,5 +106,27 @@
         <action
             android:id="@+id/action_topDoctors_to_doctorDetails"
             app:destination="@id/doctorDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.doctorappointment.ui.fragments.User.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_home"
+            app:destination="@id/home"
+            app:popUpTo="@id/home"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/makeAppointmentFragment"
+        android:name="com.example.doctorappointment.ui.fragments.User.MakeAppointmentFragment"
+        android:label="fragment_make_appointment"
+        tools:layout="@layout/fragment_make_appointment" >
+        <action
+            android:id="@+id/action_makeAppointmentFragment_to_doctorDetails"
+            app:destination="@id/doctorDetails"
+            app:popUpTo="@id/doctorDetails"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

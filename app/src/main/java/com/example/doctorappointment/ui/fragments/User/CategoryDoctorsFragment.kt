@@ -1,4 +1,4 @@
-package com.example.doctorappointment.ui.fragments
+package com.example.doctorappointment.ui.fragments.User
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.doctorappointment.R
 import com.example.doctorappointment.adapter.CategoryAdapter
-import com.example.doctorappointment.adapter.DoctorsAdapter
 import com.example.doctorappointment.adapter.TopDoctorsAdapter
 import com.example.doctorappointment.databinding.FragmentDoctorCategoryBinding
 import com.example.doctorappointment.domen.CategoryModel

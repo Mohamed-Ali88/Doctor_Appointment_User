@@ -1,4 +1,4 @@
-package com.example.doctorappointment.ui.fragments
+package com.example.doctorappointment.ui.fragments.User
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -32,6 +32,8 @@ class HomeFragment : Fragment() {
         initTopDoctors()
         onSeeAllClicked()
         controlAppearingBottomNavigation()
+        onSearchEdClicked()
+        onNotificationIVClicked()
 
         return binding.root
     }
@@ -71,6 +73,17 @@ class HomeFragment : Fragment() {
                 binding.rvTopDoctors.adapter = doctorsAdapter
                 binding.pbTopDoctors.visibility = View.GONE
             }
+        }
+    }
+
+    private fun onSearchEdClicked(){
+        binding.editTextText.setOnClickListener{
+            findNavController().navigate(R.id.action_home_to_searchDoctors)
+        }
+    }
+    private fun onNotificationIVClicked(){
+        binding.imageView3.setOnClickListener{
+            findNavController().navigate(R.id.action_home_to_notificationFragment)
         }
     }
 

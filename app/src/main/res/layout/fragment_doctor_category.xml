@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.CategoryDoctorsFragment">
+    tools:context=".ui.fragments.User.CategoryDoctorsFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbTopDoctor2"
@@ -73,6 +73,7 @@
                 android:id="@+id/rvCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                tools:listitem="@layout/viewholder_category"
                 android:clipToPadding="false"
                 android:orientation="horizontal"
                 android:paddingEnd="16dp"
@@ -110,6 +111,7 @@
             android:id="@+id/rvDoctors"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            tools:listitem="@layout/viewholder_top_doctors"
             android:layout_marginTop="16dp"
             android:clipToPadding="false"
             android:orientation="vertical"

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/auth_nav_graph"
-    app:startDestination="@id/OTPFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/OTPFragment"
@@ -22,6 +22,7 @@
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
+            app:enterAnim="@anim/from_left"
             android:id="@+id/action_signInFragment_to_OTPFragment"
             app:destination="@id/OTPFragment" />
     </fragment>
@@ -32,6 +33,9 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/from_left"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

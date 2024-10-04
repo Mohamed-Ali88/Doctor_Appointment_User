@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.User.BookedFragment">
+    tools:context=".ui.fragments.User.MakeAppointmentFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbOrderFragment"
@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Reservations" />
+        app:title="Make Appointment" />
 
     <View
         android:id="@+id/view"
@@ -25,16 +25,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tbOrderFragment" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvBooked"
-        android:layout_width="0dp"
-        tools:listitem="@layout/viewholder_reservation"
+
+    <TextView
+        android:id="@+id/tvChooseOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose the nearst one"
+        android:textSize="14sp"
         android:layout_margin="@dimen/_8sdp"
+        android:textColor="@color/black"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/baseline_ads_click_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvClinics"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/_8sdp"
+        tools:listitem="@layout/viewholder_clinic"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view" />
+        app:layout_constraintTop_toBottomOf="@id/tvChooseOne" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

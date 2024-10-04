@@ -22,6 +22,8 @@ class OTPFragment : Fragment() {
     private lateinit var binding: FragmentOTPBinding
 
     private lateinit var userNumber: String
+    private lateinit var userName: String
+    private lateinit var userAddress: String
 
     private val viewModel: AuthViewModel by viewModels()
 
@@ -30,7 +32,7 @@ class OTPFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentOTPBinding.inflate(layoutInflater)
-        getUserNumber()
+        getUserData()
         customizingEnteringOtp()
         sendOTP()
         onBackButtonClicked()
@@ -40,7 +42,7 @@ class OTPFragment : Fragment() {
 
     private fun onLoginButtonClicked() {
         binding.btnLogin.setOnClickListener {
-            Utils.showDialog(requireContext(), "Singing now....")
+            Utils.showDialog(requireContext(), "Verification Number....")
             val editTexts = arrayOf(
                 binding.et0tp1,
                 binding.et0tp2,
@@ -61,7 +63,7 @@ class OTPFragment : Fragment() {
 
     private fun verifyOTP(otp: String) {
         val user =
-            User(uid = null, userPhoneNumber = userNumber, userAddress = " ")
+            User(uid = null, userPhoneNumber = userNumber, userAddress = userAddress, name = userName)
         viewModel.apply {
             signInWithPhoneAuthCredential(otp, userNumber, user)
             lifecycleScope.launch {
@@ -136,9 +138,11 @@ class OTPFragment : Fragment() {
         }
     }
 
-    private fun getUserNumber() {
+    private fun getUserData() {
         val bundle = arguments
         userNumber = bundle?.getString("number").toString()
+        userName = bundle?.getString("name").toString()
+        userAddress = bundle?.getString("location").toString()
         binding.tvUserNumber.text = userNumber
 
 

@@ -1,4 +1,4 @@
-package com.example.doctorappointment.ui.fragments
+package com.example.doctorappointment.ui.fragments.User
 
 import android.content.Intent
 import android.net.Uri
@@ -9,10 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.example.doctorappointment.R
 import com.example.doctorappointment.databinding.FragmentDetailsDoctorBinding
 import com.example.doctorappointment.domen.DoctorsModel
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DoctorDetailsFragment : Fragment() {
     private lateinit var binding: FragmentDetailsDoctorBinding

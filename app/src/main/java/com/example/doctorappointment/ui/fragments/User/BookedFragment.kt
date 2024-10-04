@@ -1,19 +1,19 @@
-package com.example.doctorappointment.ui.fragments
+package com.example.doctorappointment.ui.fragments.User
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.doctorappointment.databinding.FragmentDoctorsSearchBinding
+import com.example.doctorappointment.databinding.FragmentBookedBinding
 
-class SearchDoctorsFragment : Fragment() {
-    private lateinit var binding: FragmentDoctorsSearchBinding
+class BookedFragment : Fragment() {
+    private lateinit var binding : FragmentBookedBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentDoctorsSearchBinding.inflate(layoutInflater)
+        binding = FragmentBookedBinding.inflate(layoutInflater)
         return binding.root
     }
 
